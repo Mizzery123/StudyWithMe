@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">StudyWithMe</string>
+    <string name="Open">NavBar</string>
+    <string name="Close">NavBar</string>
+    <string-array name="schoolItems">
+        <item> SAS </item>
+        <item> SEG </item>
+        <item> SOH </item>
+        <item> SOI </item>
+        <item> SMC </item>
+        <item> SHL </item>
+        <item> STA </item>
+    </string-array>
+    <string-array name="courseItems">
+        <item> Diploma in Mobile Software Development (R47) </item>
+        <item> Diploma in Consumer Behaviour and Research (R48) </item>
+        <item> Diploma in Sports Coaching (R49) </item>
+    </string-array>
+</resources>
