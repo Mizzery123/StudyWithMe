@@ -77,8 +77,8 @@ public class QuestionActivity extends AppCompatActivity {
                     Intent intentNewAct = new Intent(getBaseContext(), QuestionActivity.class);
                     startActivity(intentNewAct);
                 }
-                else if ( id==R.id.account){
-                    Intent intentNewAct = new Intent(getBaseContext(), Register2Activity.class);
+                else if ( id==R.id.list){
+                    Intent intentNewAct = new Intent(getBaseContext(), EventActivity.class);
                     startActivity(intentNewAct);
                 } else if ( id==R.id.settings) {
 

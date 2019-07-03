@@ -18,7 +18,7 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Questions and Answers"
+            android:text="Your Events"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -42,10 +42,6 @@
 
                 app:srcCompat="@drawable/ic_create_black_24dp" />
         </LinearLayout>
-
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="34dp" />
 
         <ImageView
             android:id="@+id/imageView7"

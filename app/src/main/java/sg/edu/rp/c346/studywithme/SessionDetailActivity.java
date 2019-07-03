@@ -1,8 +1,10 @@
 package sg.edu.rp.c346.studywithme;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -46,6 +48,21 @@ if(module=="Android Programming"){
 } else {
     ivSchool.setImageResource(R.drawable.sas);
 }
+
+        buttonJoined.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder myBuilder = new AlertDialog.Builder(SessionDetailActivity.this);
+                myBuilder.setTitle("Successfully Joined!");
+                myBuilder.setMessage("Please be punctual! Check your event list for the details");
+                myBuilder.setCancelable(false);
+                myBuilder.setPositiveButton("Ok", null);
+                AlertDialog myDialog = myBuilder.create();
+                myDialog.show();
+
+
+            }
+        });
 
 
     }
