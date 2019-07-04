@@ -24,7 +24,7 @@ import java.util.Calendar;
 
 public class EventActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "EventActivity";
 
     private TextView tvDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
@@ -115,8 +115,10 @@ public class EventActivity extends AppCompatActivity {
                     Intent intentNewAct = new Intent(getBaseContext(),
                             EventActivity.class);
                     startActivity(intentNewAct);
-                } else if ( id==R.id.settings) {
-
+                } else if ( id==R.id.edit) {
+                    Intent intentNewAct = new Intent(getBaseContext(),
+                            RegisteredActivity.class);
+                    startActivity(intentNewAct);
                 }
 
 

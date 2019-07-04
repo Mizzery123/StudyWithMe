@@ -49,6 +49,14 @@ public class QuestionDetailActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         String value = input.getText().toString();
                         // Do something with value!
+                        AlertDialog.Builder myBuilder = new AlertDialog.Builder(QuestionDetailActivity.this);
+                        myBuilder.setTitle("Answer Submitted!");
+                        myBuilder.setMessage("Your Answer : " + value);
+                        myBuilder.setCancelable(false);
+                        myBuilder.setPositiveButton("Ok", null);
+                        AlertDialog myDialog = myBuilder.create();
+                        myDialog.show();
+
                     }
                 });
 

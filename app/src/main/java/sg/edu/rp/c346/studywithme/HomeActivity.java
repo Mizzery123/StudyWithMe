@@ -1,18 +1,23 @@
 package sg.edu.rp.c346.studywithme;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -28,6 +33,11 @@ public class HomeActivity extends AppCompatActivity {
     CustomAdapter caToDo;
     SearchView svPartner;
 
+    private static final String TAG = "HomeActivity";
+
+    private TextView tvDate;
+    private DatePickerDialog.OnDateSetListener mDateSetListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +48,37 @@ public class HomeActivity extends AppCompatActivity {
         svPartner = findViewById(R.id.simpleSearchView);
 
         CharSequence search = svPartner.getQuery();
+
+        tvDate = findViewById(R.id.tvDate);
+
+        tvDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(
+                        HomeActivity.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        mDateSetListener,
+                        year,month,day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month + 1;
+                Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
+
+                String date = month + "/" + day + "/" + year;
+                tvDate.setText("Select Date : " + date);
+            }
+        };
 
 
         alToDoList = new ArrayList<>();
@@ -83,8 +124,10 @@ public class HomeActivity extends AppCompatActivity {
                         Intent intentNewAct = new Intent(getBaseContext(),
                                 EventActivity.class);
                         startActivity(intentNewAct);
-                    } else if ( id==R.id.settings) {
-
+                    } else if ( id==R.id.edit) {
+                        Intent intentNewAct = new Intent(getBaseContext(),
+                                RegisteredActivity.class);
+                        startActivity(intentNewAct);
                     }
 
 
