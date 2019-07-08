@@ -77,8 +77,8 @@ public class EventActivity extends AppCompatActivity {
         date1.set(2018,7,1);
         Calendar date2 = Calendar.getInstance();
         date2.set(2018,9,22);
-        ToDoItem item1 = new ToDoItem("Android Programming", date1, "","", true);
-        ToDoItem item2 = new ToDoItem("Chemistry", date2, "", "", false);
+        ToDoItem item1 = new ToDoItem("Chemistry", date2, "", "", false);
+        ToDoItem item2 = new ToDoItem("Android Programming", date1, "","", true);
 
         alToDoList.add(item1);
         alToDoList.add(item2);
@@ -134,7 +134,7 @@ public class EventActivity extends AppCompatActivity {
         lvSession.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent intent = new Intent(getBaseContext(), SessionDetailActivity.class);
+                Intent intent = new Intent(getBaseContext(), SessionDetailUnjoinedActivity.class);
                 ToDoItem currentItem = alToDoList.get(position);
 
                 if (position == 0) {

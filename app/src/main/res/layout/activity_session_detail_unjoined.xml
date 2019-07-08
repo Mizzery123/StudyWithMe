@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="sg.edu.rp.c346.studywithme.HomeActivity">
+    tools:context=".SessionDetailUnjoinedActivity">
 
 
     <ImageView
@@ -83,16 +83,36 @@
         android:layout_height="wrap_content"
         android:text="2. Soo Wei Ling ( 17392994 ) - DISM" />
 
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#F44336"
+        android:text="3. Micah Tam ( 17393394 ) - DMSD" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="195dp"
+            android:layout_height="54dp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4CAF50"
+  android:layout_alignBottom="@+id/space"
+            android:text="You have joined this event!" />
 
         <Button
             android:id="@+id/joinButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="Join" />
+            android:text="Unjoin" />
     </RelativeLayout>
 
 </LinearLayout>
