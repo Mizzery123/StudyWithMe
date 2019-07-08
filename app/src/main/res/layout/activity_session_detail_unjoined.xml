@@ -12,13 +12,13 @@
         android:id="@+id/ivSchool"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/soi" />
+        app:srcCompat="@drawable/sas" />
 
     <TextView
         android:id="@+id/tvModule"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Chemistry"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView"
+            android:text="Date : 22/9/2018"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <TextView
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView"
+            android:text="Time : 11.0am"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     </LinearLayout>
@@ -49,14 +49,14 @@
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="For chemistry students. Please do join if you are good at it as I want an A!"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <TextView
         android:id="@+id/tvVenue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Venue : RP Library"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <Space
