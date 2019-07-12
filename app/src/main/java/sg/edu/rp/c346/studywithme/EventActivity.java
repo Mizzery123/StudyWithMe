@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -26,6 +27,7 @@ public class EventActivity extends AppCompatActivity {
 
     private static final String TAG = "EventActivity";
 
+    Button btnUnjoined;
     private TextView tvDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
 
